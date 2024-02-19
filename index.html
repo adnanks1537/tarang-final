@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarang offcial </title>
+    <link rel="icon" href="png/ncas logo.jpeg" type="image/x-icon">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: bisque;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            max-width: 250px; /* Set the maximum width for your logo */
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .button-container {display: grid; -direction: column align-items center; 
+            justify-content:; height: 10vh; }
+
+        button {
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-align: center;
+     -ms-flex-align: center;
+         align-items: center;
+ -webkit-box-pack: center;
+     -ms-flex-pack: center;
+         justify-content: center;
+ gap: 10px;
+ font-family: inherit;
+ font-size: 13px;
+ font-weight: 500;
+ text-transform: uppercase;
+ letter-spacing: 0.4px;
+ color: #7e97b8;
+ background-color: #e0e8ef;
+ border-style: solid;
+ border-width: 2px 2px 2px 2px;
+ border-color: rgba(255, 255, 255, 0.333);
+ border-radius: 40px 40px 40px 40px;
+ padding: 16px 24px 16px 28px;
+ -webkit-transform: translate(0px, 0px) rotate(0deg);
+     -ms-transform: translate(0px, 0px) rotate(0deg);
+         transform: translate(0px, 0px) rotate(0deg);
+ -webkit-transition: 0.2s;
+ transition: 0.2s;
+ -webkit-box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+         box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+}
+
+button:hover {
+ color: #516d91;
+ background-color: #E5EDF5;
+ -webkit-box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+         box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+}
+
+button:active {
+ -webkit-box-shadow: none;
+         box-shadow: none;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="png/tarang logo.png" alt="College Fest Logo">
+        
+    </header>
+    <main class="container">
+        <div class="button-container">
+            <button type="button" class="button-1" onclick="redirectToRegistration()">Spot Registration
+            </button><br>
+                   
+            <button type="button" class="button-2" onclick="redirectToEventRegistration()">Event Details
+            </button><br>
+            <button type="button" class="button-3" onclick="redirectToUPIPayment()">UPI Payment
+              </button><br>
+              <button type="button" class="button-2" onclick="redirectToleaderboard()">LeaderBoard
+            </button><br>
+        </div>
+    </main>
+    
+     <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Custom JavaScript for UPI Payment redirection -->
+    <script>
+        function redirectToUPIPayment() {
+            // UPI ID and amount
+            var upiId = "9487086300@ybl";
+            var amount = 200;
+    
+            // Form the UPI payment URL
+            var paymentURL = "upi://pay?pa=9487086300@ybl&mc=YourMerchantCode&tid=YourTransactionID&tr=YourTransactionReference&tn=PaymentDescription&am=200&cu=INR&url=scheme://callback" + upiId + "?amount=" + amount;
+    
+            // Redirect to the UPI payment URL
+             window.location.href = paymentURL;
+        }
+        function redirectToRegistration() {
+            window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSccCkaJRsjbs77wbmoGOwtdRCf2jMaMwkEiEeiYyN8DS2fR1w/viewform'; // Redirect to index.html for spot registration
+        }
+    
+        function redirectToEventRegistration() {
+            // Add code here to redirect to the event registration page if needed
+            window.location.href = "tarang.html"
+        }
+        function redirectToleaderboard() {
+            // Add code here to redirect to the event registration page if needed
+            window.location.href = "leaderboard.html"
+        }
+    </script>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
